@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Detail from "./routes/Detail";
@@ -8,12 +8,12 @@ import "./App.css";
 
 function App(){
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navigation />
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" exact={true} component={About} />
       <Route path="/movie/:id" exact={true} component={Detail} />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 export default App;
